@@ -1,35 +1,166 @@
-<html>
-    <style>
-        section{
-            width:100%;
-            height:100%;
-            background-color:lightblue;
-            display: flex;
-        }
-        #primeiro{
-            width:20%;
-            height:100%;
-            background-color:red;
-        }
-         #segundo{
-            width:60%;
-            height:100%;
-            background-color:blue;
-        }
-         #terceiro{
-            width:20%;
-            height:100%;
-            background-color:black;
-        }
-    </style>
-    <body>
-    <header></header>
-    <h1>Receitas</h1>
-    <Section>
-        <div id="primeiro"></div>
-        <div id="segundo"></div>
-        <div id="terceiro"></div>
-    </Section>
-    <footer></footer>
-    </body>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #8e44ad;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #8e44ad;
+}
+
+section {
+    width: 100%;
+    flex: 1;
+    background-color: #f5eef8;
+    display: flex;
+    min-height: 500px;
+}
+
+#primeiro {
+    width: 20%;
+    background-color: #f4ecf7;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+#segundo {
+    width: 60%;
+    background-color: white;
+    padding: 30px;
+}
+
+#terceiro {
+    width: 20%;
+    background-color: #f4ecf7;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}
+
+footer {
+    background-color: #8e44ad;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #a569bd;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.info {
+    background-color: #f9e79f;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.perfil {
+    background-color: #ebdef0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #6c3483;
+}
+
+.mensagem {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #d5f5e3;
+    text-align: center;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+<header>
+    <h2>🌸 Minha Página Pessoal</h2>
+    <p>Conheça um pouco sobre mim 💜</p>
+</header>
+
+<h1>✨ Quem é Emanuely?</h1>
+
+<section>
+    <div id="primeiro">
+        <h3>💡 Curiosidades</h3>
+        <div class="info">🎂 Tenho 17 anos</div>
+        <div class="info">🎉 Faço aniversário em 14 de junho</div>
+        <div class="info">👨‍👩‍👧 Moro com meus pais e dois irmãos</div>
+        <div class="info">💼 Trabalho na JustApple desde 03/06/2025</div>
+    </div>
+
+    <div id="segundo">
+        <div class="perfil">
+            <h2>💜 Sobre mim</h2>
+            <p>Meu nome é <strong>Emanuely dos Santos Massuquini</strong>, nasci em 2008 e tenho 17 anos. Sou uma pessoa dedicada, gosto de aprender coisas novas e valorizo muito minha família.</p>
+            <p style="margin-top: 15px;">Atualmente trabalho na <strong>JustApple</strong>, onde comecei no dia 03 de junho de 2025. Essa experiência tem sido muito importante para o meu crescimento pessoal e profissional.</p>
+            <p style="margin-top: 15px;">Tenho uma melhor amiga chamada <strong>Heloísa Macedo</strong>, e nossa amizade já dura cerca de 10 anos ❤️</p>
+            <button onclick="mostrarMensagem()">Clique para ver uma mensagem 💌</button>
+            <div id="msg"></div>
+        </div>
+    </div>
+
+    <div id="terceiro">
+        <h3>⭐ Destaques</h3>
+        <div class="card">👭 Amizade de 10 anos</div>
+        <div class="card">💼 Experiência profissional</div>
+        <div class="card">💜 Amor pela família</div>
+        <div class="info" style="margin-top: 20px;">
+            ✨ "Cada dia é uma nova oportunidade para crescer e ser melhor."
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>🌸 Página pessoal da Emanuely</p>
+    <p>Feita com carinho 💜</p>
+</footer>
+
+<script>
+function mostrarMensagem() {
+    const msgDiv = document.getElementById('msg');
+    msgDiv.innerHTML = "✨ Você é incrível e está construindo um futuro lindo!";
+    msgDiv.className = "mensagem";
+}
+</script>
+</body>
 </html>
